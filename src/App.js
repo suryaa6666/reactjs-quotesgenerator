@@ -3,7 +3,7 @@ import { Card, Button, CardContent } from "@mui/material";
 
 function App() {
   const [quotes, setQuotes] = useState(``);
-
+    
   const GenerateQuotes = () => {
     fetch("https://api.quotable.io/random")
       .then((response) => response.json())
@@ -15,7 +15,21 @@ function App() {
 
   const DukungDeveloper = () => {
     window.open("http://saweria.co/suryaelidanto");
-  }
+  };
+
+  const SaweriaClient = require("saweria");
+
+  const client = new SaweriaClient();
+
+  client.on("login", (user) => {
+    console.log("Logged in as: ", user.username);
+  });
+
+  client.on("donations", (donations) => {
+    console.log(donations);
+  });
+
+  client.login("suryaelidanto@gmail.com", "Uya12321!");
 
   return (
     <div style={{ backgroundColor: "#5EFAF7", width: "100" }}>
@@ -38,10 +52,10 @@ function App() {
           left: "50%",
           top: "50%",
           transform: "translate(-50%,100%)",
-          justifyContent: 'center',
-          alignItems: 'center',
+          justifyContent: "center",
+          alignItems: "center",
           flex: 1,
-          display: 'flex'
+          display: "flex",
         }}
         sx={{ maxWidth: 1000 }}
       >
