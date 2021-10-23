@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Card, Button, CardContent } from "@mui/material";
-// import styles from 'Styles.js';
 
 function App() {
   const [quotes, setQuotes] = useState(``);
@@ -15,18 +14,30 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{backgroundColor: "#5EFAF7", width: "100" }}>
       <Card
         style={{
           position: "absolute",
           left: "50%",
           top: "50%",
-          transform: "translate(-50%,-50%)",
+          transform: "translate(-50%,-100%)",
+        }}
+        sx={{ width: '100%', maxHeight: 200, overflowY: 'scroll'}}
+      >
+        <CardContent>
+          <h2> {quotes} </h2>
+        </CardContent>
+      </Card>
+      <Card
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%,100%)",
         }}
         sx={{ maxWidth: 500 }}
       >
         <CardContent>
-          <h1> {quotes} </h1>
           <Button variant="contained" onClick={GenerateQuotes}>
             {" "}
             Generate Quotes
