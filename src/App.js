@@ -13,8 +13,12 @@ function App() {
       });
   };
 
+  const DukungDeveloper = () => {
+    window.open("http://saweria.co/suryaelidanto");
+  }
+
   return (
-    <div style={{backgroundColor: "#5EFAF7", width: "100" }}>
+    <div style={{ backgroundColor: "#5EFAF7", width: "100" }}>
       <Card
         style={{
           position: "absolute",
@@ -22,7 +26,7 @@ function App() {
           top: "50%",
           transform: "translate(-50%,-100%)",
         }}
-        sx={{ width: '100%', maxHeight: 200, overflowY: 'scroll'}}
+        sx={{ width: "100%", maxHeight: 200, overflowY: "scroll" }}
       >
         <CardContent>
           <h2> {quotes} </h2>
@@ -34,13 +38,23 @@ function App() {
           left: "50%",
           top: "50%",
           transform: "translate(-50%,100%)",
+          justifyContent: 'center',
+          alignItems: 'center',
+          flex: 1,
+          display: 'flex'
         }}
-        sx={{ maxWidth: 500 }}
+        sx={{ maxWidth: 1000 }}
       >
         <CardContent>
           <Button variant="contained" onClick={GenerateQuotes}>
             {" "}
             Generate Quotes
+          </Button>
+        </CardContent>
+        <CardContent>
+          <Button color="success" variant="contained" onClick={DukungDeveloper}>
+            {" "}
+            Dukung Developer
           </Button>
         </CardContent>
       </Card>
