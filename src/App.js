@@ -34,14 +34,33 @@ function App() {
   return (
     <ChakraProvider>
       <Toaster position="top-center" reverseOrder={true} />
-      <Box pos="absolute" right="0">
-        <Button
-          style={{ backgroundColor: "#ECF2F6", border: "1px solid black" }}
-          onClick={SupportDeveloper}
-        >
-          <FaHeart style={{ color: "red", marginRight: "10" }} /> Support
-        </Button>
+      <Box
+        style={{
+          display: "flex",
+          flex: 1,
+          height: 50,
+        }}
+        boxShadow="outline"
+        bg="black"
+        p="6"
+      >
+        <Box style={{ color: "white", alignSelf: "center" }}>
+          <h1>
+            {" "}
+            <b> BeQuotes - Quotes Generator </b>
+          </h1>
+        </Box>
+        <Box position="absolute" right="6" style={{ alignSelf: "center" }}>
+          <Button
+            style={{ backgroundColor: "#ECF2F6", border: "1px solid black" }}
+            onClick={SupportDeveloper}
+          >
+            <FaHeart style={{ color: "red", marginRight: "10", fontSize: 14}} />{" "}
+            <p style={{ fontSize: 14 }}>Support </p>
+          </Button>
+        </Box>
       </Box>
+
       <Box
         style={{
           position: "absolute",
