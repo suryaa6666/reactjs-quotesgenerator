@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Card, Button, CardContent } from "@mui/material";
+import './App.css';
 
 function App() {
   const [quotes, setQuotes] = useState(``);
@@ -18,7 +19,7 @@ function App() {
   };
 
   return (
-    <div style={{ backgroundColor: "#5EFAF7", width: "100" }}>
+    <div style={{ backgroundColor: "#5EFAF7", width: "100"}}>
       <Card
         style={{
           position: "absolute",
