@@ -88,6 +88,7 @@ function App() {
         }}
       >
         <Textarea
+          resize="none"
           placeholder="Quotes goes here..."
           value={quotes}
           onChange={(quotes) => ""}
