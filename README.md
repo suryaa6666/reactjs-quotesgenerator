@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-# ReactJS Quotes Generator
 Quotes Generator Made With ReactJS
 =======
 # Getting Started with Create React App
