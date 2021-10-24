@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-// import { Card, Button, CardContent } from "@mui/material";
 import { Button, Box, ChakraProvider } from "@chakra-ui/react";
+import { FaHeart } from "react-icons/fa";
+
+// import { Card, Button, CardContent } from "@mui/material";
 
 import "./App.css";
 
@@ -68,13 +70,29 @@ function App() {
     //     </Card>
     //   </div>
     <ChakraProvider>
-      <Box>
-        <Button style={{ backgroundColor: "#8BD3DD", color: "white" }}>
+      <Box pos="absolute" right="0">
+        <Button
+          style={{ backgroundColor: "#ECF2F6", border: "1px solid black" }}
+        >
+          <FaHeart style={{ color: "red", marginRight: "10" }} /> Support
+        </Button>
+      </Box>
+      <Box
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "50%",
+          transform: "translate(-50%, 1500%)",
+        }}
+      >
+        <Button
+          style={{ backgroundColor: "#8BD3DD", border: "1px solid black" }}
+        >
           Generate Quotes
         </Button>
-        <Button style={{ backgroundColor: "#ECF2F6", }}>
-          Support
-        </Button>
+      </Box>
+      <Box style={{left: '50%', top: 50, transform: "translate(-50%)", display: 'flex', flex: 1, minWidth: 800, minHeight: 400, maxWidth: 800, maxHeight: 400, backgroundColor: "red", position: 'absolute' }}>
+
       </Box>
     </ChakraProvider>
   );
