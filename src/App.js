@@ -40,8 +40,8 @@ function App() {
           flex: 1,
           height: 50,
         }}
-        boxShadow="outline"
-        bg="black"
+        boxShadow="md"
+        bg="#8BD3DD"
         p="6"
       >
         <Box style={{ color: "white", alignSelf: "center" }}>
