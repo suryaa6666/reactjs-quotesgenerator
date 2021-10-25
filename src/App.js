@@ -52,7 +52,9 @@ function App() {
             style={{ backgroundColor: "#ECF2F6", border: "1px solid black" }}
             onClick={SupportDeveloper}
           >
-            <FaHeart style={{ color: "red", marginRight: "10", fontSize: 14}} />{" "}
+            <FaHeart
+              style={{ color: "red", marginRight: "10", fontSize: 14 }}
+            />{" "}
             <p style={{ fontSize: 14 }}>Support </p>
           </Button>
         </Box>
@@ -63,14 +65,19 @@ function App() {
           position: "absolute",
           left: "50%",
           top: "50%",
-          transform: "translate(-50%, 1000%)",
+          transform: "translate(-50%, 750%)",
         }}
       >
         <Button
           isLoading={isGenerating}
           loadingText="Generating"
           onClick={GenerateQuotes}
-          style={{ backgroundColor: "#8BD3DD", border: "1px solid black" }}
+          style={{
+            backgroundColor: "#8BD3DD",
+            border: "1px solid black",
+            fontSize: 20,
+            padding: 25,
+          }}
           id="generateQuotesButton"
         >
           Generate Quotes
@@ -81,12 +88,17 @@ function App() {
           position: "absolute",
           left: "50%",
           top: "50%",
-          transform: "translate(-50%, 1150%)",
+          transform: "translate(-50%, 900%)",
         }}
       >
         <Button
           onClick={CopyQuotes}
-          style={{ backgroundColor: "#FAAF2A", border: "1px solid black" }}
+          style={{
+            backgroundColor: "#FAAF2A",
+            border: "1px solid black",
+            fontSize: 20,
+            padding: 25,
+          }}
         >
           Copy To Clipboard
         </Button>
@@ -94,7 +106,7 @@ function App() {
       <Box
         style={{
           left: "50%",
-          top: 275,
+          top: 175,
           transform: "translate(-50%)",
           display: "flex",
           flex: 1,
@@ -104,6 +116,8 @@ function App() {
         }}
       >
         <Textarea
+          style={{ fontSize: 30}}
+          height="200"
           resize="none"
           placeholder="Quotes goes here..."
           value={quotes}
