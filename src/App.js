@@ -42,9 +42,9 @@ function App() {
         p="6"
       >
         <Box style={{ color: "white", alignSelf: "center" }}>
-          <h1>
+          <h1 style={{fontSize: 20}}>
             {" "}
-            <b> BeQuotes - Quotes Generator </b>
+            <b> BeQuotes </b>
           </h1>
         </Box>
         <Box position="absolute" right="6" style={{ alignSelf: "center" }}>
@@ -65,7 +65,7 @@ function App() {
           position: "absolute",
           left: "50%",
           top: "50%",
-          transform: "translate(-50%, 750%)",
+          transform: "translate(-50%, 770%)",
         }}
       >
         <Button
@@ -88,7 +88,7 @@ function App() {
           position: "absolute",
           left: "50%",
           top: "50%",
-          transform: "translate(-50%, 900%)",
+          transform: "translate(-50%, 910%)",
         }}
       >
         <Button
@@ -106,7 +106,7 @@ function App() {
       <Box
         style={{
           left: "50%",
-          top: 175,
+          top: 120,
           transform: "translate(-50%)",
           display: "flex",
           flex: 1,
@@ -117,7 +117,7 @@ function App() {
       >
         <Textarea
           style={{ fontSize: 30}}
-          height="200"
+          height="275"
           resize="none"
           placeholder="Quotes goes here..."
           value={quotes}
