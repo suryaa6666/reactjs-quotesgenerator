@@ -16,7 +16,7 @@ function App() {
       count: 0,
     },
   });
-
+  analytics.set({});
   const [quotes, setQuotes] = useState(``);
   const [isGenerating, setIsGenerating] = useState(false);
 
