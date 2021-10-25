@@ -2361,10 +2361,18 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@splitbee/web@^0.3.0":
+"@splitbee/core@^0.3.0":
   version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@splitbee/web/-/web-0.3.0.tgz#676ebe877b6d82a10ece6527a07f70b1994d242e"
-  integrity sha512-jNPDKg0GQGa4jCaBc6JQsv0NHmBA80WCwZE49nFyhcbo32WF0GyqXeice7ZApy7OUHI16bAUAzm4MOQw3gvxfQ==
+  resolved "https://registry.yarnpkg.com/@splitbee/core/-/core-0.3.0.tgz#ff488068d053a5a751755d66e807280505d4386f"
+  integrity sha512-ALoRGIM8RSBBjUsg/7gGtnHMwF9xb++J+LAwkMns28uXo+oEfNWfHdnAYgniJEREJKKD+33LL8pCs7isVG/4MA==
+
+"@splitbee/node@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@splitbee/node/-/node-0.3.1.tgz#7e45d82d48204dcb3fdfa2c6ef85a622d92d84a6"
+  integrity sha512-z6HpCuS5n5d5Uqmk3xavffVG21XqlcFgSP+3j/6At/kfJq8aGZrBGJCa79FSh+hV6sTYN6zxamPUajBISMcE3w==
+  dependencies:
+    "@splitbee/core" "^0.3.0"
+    cross-fetch "^3.0.5"
 
 "@surma/rollup-plugin-off-main-thread@^1.1.1":
   version "1.4.2"
@@ -4592,6 +4600,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
+cross-fetch@^3.0.5:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
+  dependencies:
+    node-fetch "2.6.1"
+
 cross-spawn@7.0.3, cross-spawn@^7.0.0, cross-spawn@^7.0.2:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -6394,7 +6409,7 @@ globby@^6.1.0:
 
 goober@^2.0.35:
   version "2.0.41"
-  resolved "https://registry.yarnpkg.com/goober/-/goober-2.0.41.tgz#0a3d786ff9917bcf2a096eef703bf717838cbec9"
+  resolved "https://registry.npmjs.org/goober/-/goober-2.0.41.tgz"
   integrity sha512-kwjegMT5018zWydhOQlQneCgCtrKJaPsru7TaBWmTYV0nsMeUrM6L6O8JmNYb9UbPMgWcmtf+9p4Y3oJabIH1A==
 
 got@^9.6.0:
@@ -8564,6 +8579,11 @@ no-case@^3.0.4:
     lower-case "^2.0.2"
     tslib "^2.0.3"
 
+node-fetch@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
+
 node-forge@^0.10.0:
   version "0.10.0"
   resolved "https://registry.npmjs.org/node-forge/-/node-forge-0.10.0.tgz"
@@ -10241,14 +10261,14 @@ react-focus-lock@2.5.0:
 
 react-hot-toast@^2.1.1:
   version "2.1.1"
-  resolved "https://registry.yarnpkg.com/react-hot-toast/-/react-hot-toast-2.1.1.tgz#56409ab406b534e9e58274cf98d80355ba0fdda0"
+  resolved "https://registry.npmjs.org/react-hot-toast/-/react-hot-toast-2.1.1.tgz"
   integrity sha512-Odrp4wue0fHh0pOfZt5H+9nWCMtqs3wdlFSzZPp7qsxfzmbE26QmGWIh6hG43CukiPeOjA8WQhBJU8JwtWvWbQ==
   dependencies:
     goober "^2.0.35"
 
 react-icons@^4.3.1:
   version "4.3.1"
-  resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-4.3.1.tgz#2fa92aebbbc71f43d2db2ed1aed07361124e91ca"
+  resolved "https://registry.npmjs.org/react-icons/-/react-icons-4.3.1.tgz"
   integrity sha512-cB10MXLTs3gVuXimblAdI71jrJx8njrJZmNMEMC+sQu5B/BIOmlsAjskdqpn81y8UBVEGuHODd7/ci5DvoSzTQ==
 
 react-is@^16.7.0, react-is@^16.8.1:

@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import { Button, Box, ChakraProvider, Textarea } from "@chakra-ui/react";
 import { FaHeart } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
-import splitbee from "@splitbee/web";
 
 import "./App.css";
 
 function App() {
-  splitbee.init({
-    token: "9IW0F2QJR6N1",
-    disableCookie: false,
-    scriptUrl: "https://cdn.splitbee.io/sb.js",
-    apiUrl: "https://hive.splitbee.io",
+  const { SplitbeeAnalytics } = require("@splitbee/node");
+  const analytics = new SplitbeeAnalytics("9IW0F2QJR6N1");
+
+  analytics.track({
+    userId: "my-custom-user-id",
+    event: "GeneratedCount",
+    data: {
+      count: 0,
+    },
   });
-  splitbee.enableCookie(true);
-  splitbee.track("GeneratedCount");
 
   const [quotes, setQuotes] = useState(``);
   const [isGenerating, setIsGenerating] = useState(false);
