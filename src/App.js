@@ -2,21 +2,9 @@ import React, { useState } from "react";
 import { Button, Box, ChakraProvider, Textarea } from "@chakra-ui/react";
 import { FaHeart } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
-
 import "./App.css";
 
 function App() {
-  const { SplitbeeAnalytics } = require("@splitbee/node");
-  const analytics = new SplitbeeAnalytics("9IW0F2QJR6N1");
-
-  analytics.track({
-    userId: "my-custom-user-id",
-    event: "GeneratedCount",
-    data: {
-      count: 0,
-    },
-  });
-  analytics.set({});
   const [quotes, setQuotes] = useState(``);
   const [isGenerating, setIsGenerating] = useState(false);
 
@@ -63,11 +51,8 @@ function App() {
           <Button
             style={{ backgroundColor: "#ECF2F6", border: "1px solid black" }}
             onClick={SupportDeveloper}
-            data-splitbee-event="GeneratedCount"
           >
-            <FaHeart
-              style={{ color: "red", marginRight: "10", fontSize: 14 }}
-            />{" "}
+            <FaHeart style={{ color: "red", marginRight: "10", fontSize: 14}} />{" "}
             <p style={{ fontSize: 14 }}>Support </p>
           </Button>
         </Box>
