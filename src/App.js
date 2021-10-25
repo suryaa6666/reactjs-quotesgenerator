@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Button, Box, ChakraProvider, Textarea } from "@chakra-ui/react";
 import { FaHeart } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
-
-// import { Card, Button, CardContent } from "@mui/material";
+import splitbee from '@splitbee/web';
 
 import "./App.css";
 
 function App() {
+  splitbee.init()
+  splitbee.track("Visitors"); 
+  
   const [quotes, setQuotes] = useState(``);
   const [isGenerating, setIsGenerating] = useState(false);
 
